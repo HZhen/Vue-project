@@ -2,7 +2,7 @@
 这是一个vue入门到项目实战开发的源代码集合
 包括以下代码(单独的文件夹下)：
 
-Vue继承精讲
+Vue基础精讲                                                                                                                                 
   hello world                                                                                                                             
   todolist        
   vue1-实例          
@@ -12,6 +12,6 @@ Vue继承精讲
   vue5-计算属性的setter和getter                                                                                                             
   vue6-样式绑定                                                                                                                             
   vue7-条件渲染                                                                                                                             
-  vue8-列表渲染
-
+  vue8-列表渲染                                                                                                                             
+  
 深入理解vue组件
