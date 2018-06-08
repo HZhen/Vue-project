@@ -1,0 +1,27 @@
+<!--v-if：指令会使div在文档流中移除-->
+<!--v-show：指令会使div在css上发生属性变化，实现效果-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中的条件渲染1</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-if="show" data-test="v-if">{{message}}</div>
+        <div v-else>Bye World</div>
+        <div v-show="show" data-test="v-show">{{message}}</div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                show: false,
+                message: "Hello World"
+            }
+        })
+    </script>
+</body>
+</html>

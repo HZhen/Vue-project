@@ -1,0 +1,37 @@
+/**
+** 没有使用组件化思想的TodoList
+**/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>TodoList</title>
+	<script src="./vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="inputValue"/>
+		<button v-on:click="handleBtnClick">提交</button>
+		<ul>
+			<li v-for="item in list">{{item}}</li>
+
+		</ul>
+	</div>
+
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+			    list: [],
+				inputValue: ''
+			},
+			methods: {
+                handleBtnClick: function () {
+                    this.list.push(this.inputValue);
+                    this.inputValue = ''
+                }
+			}
+		})
+	</script>
+</body>
+</html>

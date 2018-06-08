@@ -1,0 +1,30 @@
+<!--v-if：指令会使div在文档流中移除-->
+<!--v-show：指令会使div在css上发生属性变化，实现效果-->
+<!--key：因为vue会增加dom元素的复用，加了key就会复用这里的input-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中的条件渲染2</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-if="show" >
+            用户名：<input key="username"/>
+        </div>
+        <div v-else>
+            邮箱名：<input key="password"/>
+        </div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                show: false,
+            }
+        })
+    </script>
+</body>
+</html>

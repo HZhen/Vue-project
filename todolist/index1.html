@@ -1,0 +1,66 @@
+<!--** 使用组件化思想的TodoList-->
+<!--** component: 创建全局组件的方法-->
+<!--** props: 接受父组件的数据-->
+<!--** template: 子组件的模板-->
+<!--** v-bind: 父组件向子组件传值-->
+<!--** @delete="handleItemDelete"： 监听子组件delete这个事件，一旦删除就会执行父组件中的handleItemDelete方法-->
+<!--** this.$emit("delete")： 当点击子组件时，子组件会向外触发一个delete事件，通过emit传递-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>TodoList</title>
+	<script src="./vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="inputValue"/>
+		<button @click="handleBtnClick">提交</button>
+		<ul>
+			<todo-item v-bind:content="item"
+					   v-bind:index="index"
+					   v-for="(item, index) in list"
+					   @delete="handleItemDelete">
+			</todo-item>
+
+		</ul>
+	</div>
+
+	<script>
+
+		//局部组件的使用,还需要在app这个实例中注册
+		var TodoItem={
+		    props: ['content', 'index'],
+            template:"<li @click='handleItemClick'>{{content}}</li>",
+			methods: {
+                handleItemClick: function() {
+		            this.$emit("delete", this.index)
+				}
+			}
+		}
+
+
+		var app = new Vue({
+			el: '#app',
+			//局部组件的注册
+            components: {
+			    TodoItem: TodoItem
+			},
+			data: {
+			    list: [],
+				inputValue: ''
+			},
+			methods: {
+                handleBtnClick: function () {
+                    this.list.push(this.inputValue);
+                    this.inputValue = ''
+                },
+				handleItemDelete: function (index) {
+                    this.list.splice(index,1);
+                }
+			}
+		})
+	</script>
+</body>
+</html>
