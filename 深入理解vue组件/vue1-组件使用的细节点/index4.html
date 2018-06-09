@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件使用中的细节点</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+
+<div id="root">
+    <counter ref="one" @change="handleChange"></counter>
+    <counter ref="two" @change="handleChange"></counter>
+    <div>{{total}}</div>
+</div>
+
+<script>
+
+    Vue.component('counter',{
+        template: '<div @click="handleClick">{{ number }}</div>',
+        data: function(){
+            return {
+                number: 0
+            }
+        },
+        methods: {
+            handleClick: function () {
+                this.number ++
+                this.$emit('change')
+            }
+        }
+    })
+
+    var vm =new Vue({
+        el: "#root",
+        data: {
+            total: 0
+        },
+        methods: {
+            handleChange: function () {
+                this.total= this.$refs.one.number + this.$refs.two.number
+                console.log(this.$refs.one.number)
+                console.log(this.$refs.two.number)
+            }
+        }
+    })
+</script>
+</body>
+</html>
