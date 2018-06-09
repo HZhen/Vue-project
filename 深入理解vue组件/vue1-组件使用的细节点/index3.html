@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件使用中的细节点</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+
+    <div id="root">
+        <div
+                ref="hello"
+                @click="handleClick"
+        >
+            hello world
+        </div>
+    </div>
+
+    <script>
+
+        var vm =new Vue({
+            el: "#root",
+            methods: {
+                handleClick: function () {
+                    alert(this.$refs.hello.innerHTML)
+                }
+            }
+        })
+    </script>
+</body>
+</html>
