@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在Vue中的使用animate.css库</title>
+    <script src="./vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="./animate.css"/>
+    <!--引入了animate.css库就不要自己写动画效果了，下面的都可以省略掉-->
+</head>
+<body>
+
+    <div id="root">
+        <transition
+                name="fade"
+                enter-active-class="animated swing"
+                leave-active-class="animated shake"
+        >
+            <div v-if="show">hello world</div>
+        </transition>
+        <button @click="handleClick">toggle</button>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#root",
+            data: {
+                show: true
+            },
+            methods: {
+                handleClick: function () {
+                    this.show = (this.show === true ? false : true)
+                }
+            }
+        })
+    </script>
+</body>
+</html>
