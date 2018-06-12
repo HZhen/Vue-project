@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在Vue中同时使用过渡属性和动画</title>
+    <script src="./vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="./animate.css"/>
+    <!--引入了animate.css库就不要自己写动画效果了，下面的都可以省略掉-->
+    <style>
+        .fade-enter, .fade-leave-to {
+            opacity: 0;
+        }
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity 3s;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="root">
+        <!--appear解决了第一次没有动画的,type="transition"设置以过渡效果的时长作为总时长-->
+        <!--:duration="10000"设置自定义动画播放的时常，:duration="enter: 5000,leave: 10000"设置入场和出场的动画时间-->
+        <transition
+                type="transition"
+                name="fade"
+                appear
+                enter-active-class="animated swing fade-enter-active"
+                leave-active-class="animated shake fade-leave-active"
+                appear-active-class="animated swing"
+        >
+            <div v-if="show">hello world</div>
+        </transition>
+        <button @click="handleClick">toggle</button>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#root",
+            data: {
+                show: true
+            },
+            methods: {
+                handleClick: function () {
+                    this.show = (this.show === true ? false : true)
+                }
+            }
+        })
+    </script>
+</body>
+</html>
