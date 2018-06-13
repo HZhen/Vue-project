@@ -1,4 +1,4 @@
-#Vue基础精讲                                                                                                                               
+#深入理解vue组件                                                                                                                           
 hello world                                                                                                                               
 todolist
 vue1-实例                                                                                                                                  
