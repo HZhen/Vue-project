@@ -15,3 +15,14 @@
   vue8-列表渲染                                                                                                                             
   
 # 深入理解vue组件
+  vue1-组件使用的细节点
+  vue2-父子组件的数据传递
+  vue3-组件参数校验与非props特性
+  vue4-非父子组件间的传值
+  vue5-在vue中使用插槽
+  vue6-动态组件和v-once指令
+  
+# Vue3-vue中的动画特效
+  vue1-在vue中CSS的动画原理
+  vue2-在Vue中使用Animate.css库
+  vue3-在Vue中同时使用过度属性和动画
