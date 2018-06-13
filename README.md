@@ -2,7 +2,7 @@
 这是一个vue入门到项目实战开发的源代码集合
 包括以下代码(单独的文件夹下)：
 
-# Vue基础精讲                                                                                                                                
+# Vue基础精讲                                                                                                                               
   hello world                                                                                                                             
   todolist        
   vue1-实例          
