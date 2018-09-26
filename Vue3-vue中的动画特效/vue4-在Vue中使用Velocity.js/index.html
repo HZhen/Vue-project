@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中的JS动画与velocity.js</title>
+    <script src="./vue.js"></script>
+    <script src="./velocity.js"></script>
+</head>
+<body>
+
+    <div id="root">
+        <!--appear解决了第一次没有动画的,type="transition"设置以过渡效果的时长作为总时长-->
+        <!--:duration="10000"设置自定义动画播放的时常，:duration="enter: 5000,leave: 10000"设置入场和出场的动画时间-->
+        <transition 
+            name="fade"
+            @before-enter="handleBeforeEnter"
+            @enter="handleEnter"
+            @after-enter="handleAfterEnter"
+        >
+            <div v-show="show">hello world</div>
+        </transition>
+        <button @click="handleClick">toggle</button>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#root",
+            data: {
+                show: true
+            },
+            methods: {
+                handleClick () {
+                    this.show = !this.show 
+                },
+                handleBeforeEnter (el) {
+                   el.style.opacity = 0;
+                },
+                handleEnter (el, done) {
+                   Velocity(el, {
+                       opacity: 1
+                    }, {
+                        duration: 1000,
+                        complete: done
+                    })
+                },
+                handleAfterEnter (el) {
+                   console.log("动画结束")
+                }
+            }
+        })
+    </script>
+</body>
+</html>
