@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中的CSS动画原理</title>
+    <script src="./vue.js"></script>
+    <!-- css定义动画就没有必要了，我们这里使用js动画 -->
+    <!-- <style>
+        .fade-enter,.fade-leave-to {
+            opacity: 0;
+        }
+        .fade-enter-active ,.fade-leave-active {
+            transition: opacity 1s;
+        }
+    </style> -->
+</head>
+<body>
+
+    <div id="root">
+        <fade :show="show">
+            <div>hello world</div>
+        </fade>
+           
+        <fade :show="show">
+            <h1>hello world</h1>
+        </fade>
+               
+       
+        <button @click="handleBtnClick">toggle</button>
+    </div>
+
+    <script>
+
+        Vue.component('fade', {
+            props: ['show'],
+            template:
+            `
+                <transition @before-enter="handleBeforeEnter"
+                    @enter="hanleEnter">
+                    <slot v-if="show"></slot>
+                </transition>
+            `,
+            methods: {
+                handleBeforeEnter (el) {
+                    el.style.color = 'red'
+                },
+                hanleEnter (el, done) {
+                    setTimeout(()=>{
+                        el.style.color = 'green'
+                        done()
+                    },2000)
+                },
+            }
+        }) 
+            
+        var vm = new Vue({
+            el: "#root",
+            data: {
+                show: false
+            },
+            methods: {
+                handleBtnClick: function () {
+                    this.show = !this.show 
+                }
+            }
+        })
+    </script>
+</body>
+</html>
