@@ -26,4 +26,6 @@
   vue1-在vue中CSS的动画原理                                                                                                                 
   vue2-在Vue中使用Animate.css库                                                                                                             
   vue3-在Vue中同时使用过度属性和动画                                                                                                         
-  vue4-在Vue中使用Velocity.js
+  vue4-在Vue中使用Velocity.js                                                                                                               
+  vue5-Vue中多个元素或组件的过渡                                                                                                             
+  vue6-Vue中的列表过渡
