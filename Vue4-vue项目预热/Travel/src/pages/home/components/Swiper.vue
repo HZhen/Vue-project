@@ -8,6 +8,7 @@
         </swiper>
     </div> 
 </template>
+
 <script>
 export default {
     name:'HomeSwiper',
