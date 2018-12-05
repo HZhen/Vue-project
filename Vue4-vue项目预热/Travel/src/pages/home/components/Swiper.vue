@@ -17,18 +17,18 @@ export default {
     },
     data () {
         return {
-            swiperOption:{
-                pagination: '.swiper-pagination',
-                loop: true,
-                autoplay: 3000,
-                speed: 1000,
-            },
+          swiperOption:{
+            pagination: '.swiper-pagination',
+            loop: true,
+            autoplay: 3000,
+            speed: 1000,
+          }
         }
     },
     computed: {
-        showSwiper () {
-            return this.list.length
-        }
+      showSwiper () {
+        return this.list.length
+      }
     }
 }
 </script>
