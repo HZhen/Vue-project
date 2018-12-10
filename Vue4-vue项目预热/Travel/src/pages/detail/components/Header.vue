@@ -35,8 +35,13 @@ export default {
   activated () {
     window.addEventListener('scroll',this.handleScroll)
   },
+  // 页面被隐藏或者页面被替换成新的组件时触发的
+  deactivated () {
+    window.removeEventListener('scroll',this.handleScroll)
+  },
   methods: {
     handleScroll () {
+      console.log('scroll')
       const top = document.documentElement.scrollTop
       if(top > 60 ) {
         let opacity = top /140
