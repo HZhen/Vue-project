@@ -1,7 +1,6 @@
 <template>
   <transition>
     <slot>
-
     </slot>
   </transition>
 </template>
