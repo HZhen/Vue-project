@@ -20,5 +20,8 @@ export default new Router({
       name: 'Datail',
       component: () => import('@/pages/detail/Detail')
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
