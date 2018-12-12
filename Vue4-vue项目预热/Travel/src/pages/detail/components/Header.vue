@@ -32,11 +32,11 @@ export default {
       }
     }
   },
-  activated () {
+  mounted () {
     window.addEventListener('scroll',this.handleScroll)
   },
   // 页面被隐藏或者页面被替换成新的组件时触发的
-  deactivated () {
+  unmounted () {
     window.removeEventListener('scroll',this.handleScroll)
   },
   methods: {
@@ -45,7 +45,7 @@ export default {
       if(top > 60 ) {
         let opacity = top /140
         opacity = opacity > 1 ? 1 : opacity
-        this.opacityStyle = {opacity}
+        this.opacityStyle = { opacity }
         this.showAbs = false
       } else {
         this.showAbs = true
