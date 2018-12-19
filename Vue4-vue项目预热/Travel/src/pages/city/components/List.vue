@@ -68,7 +68,7 @@ export default {
     ...mapMutations(['changeCity'])   //使用mapMutations来简化mutations中的方法调用
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.wrapper)
+    this.scroll = new BScroll(this.$refs.wrapper, { mouseWheel: true, click: true, tap: true })
   },
   watch: {
     letter () {
