@@ -1,0 +1,119 @@
+{
+  "ret": true,
+  "data": {
+    "city": "成都",
+    "swiperList": [
+      {
+          "id": "0001",
+          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1809/2d/0d7dc3400a50b502.jpg_750x200_4ca95dd4.jpg"
+      },
+      {
+          "id": "0002",
+          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1808/7e/19b06067afac3402.jpg_750x200_f613313a.jpg"
+      },
+      {
+          "id": "0003",
+          "imgUrl": "http://img1.qunarzz.com/piao/fusion/1810/e0/c99056cd01148902.jpg_750x200_8b93d0b5.jpg"
+      }
+    ],
+    "iconList": [
+      {
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+        "desc": "景点门票"
+      },
+      {
+        "id": "0002",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png",
+        "desc": "泡温泉"
+      },
+      {
+        "id": "0003",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+        "desc": "成都必游"
+      },
+      {
+        "id": "0004",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png",
+        "desc": "川剧变脸"
+      },
+      {
+        "id": "0005",
+        "imgUrl": "https://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
+        "desc": "打卡圣地"
+      },
+      {
+        "id": "0006",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/ea/01d081dacb03cc02.png",
+        "desc": "赏秋色"
+      },
+      {
+        "id": "0007",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+        "desc": "一日游"
+      },
+      {
+        "id": "0008",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/54/35899492b1302802.png",
+        "desc": "成都熊猫基地"
+      },
+       {
+        "id": "0009",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+        "desc": "全部"
+      }
+    ],
+    "recommendList": [
+      {
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_200x200_63285bd9.jpg",
+        "title": "成都海昌极地海洋公园",
+        "desc": "蠢萌企鹅陪你嗨翻这个秋"
+      },
+       {
+         "id": "0002",
+         "imgUrl": "http://img1.qunarzz.com/sight/p0/201407/03/a584374ee80b738e2600d6bcaf1299e3.jpg_200x200_c26fb243.jpg",
+        "title": "都江堰",
+        "desc": "气势磅礴的“世界水利文化鼻祖"
+      },
+       {
+        "id": "0003",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201301/16/ae96ce4058bd5cf093835fbb.jpg_200x200_e4cb9743.jpg",
+        "title": "青城道温泉",
+        "desc": "吐纳青城气息，享受自然温暖"
+      },
+      {
+        "id": "0004",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201307/23/b8db11dca4378903c8d65eac.jpg_200x200_56f59a84.jpg",
+        "title": "成都动物园",
+        "desc": "🔥好评如潮，小伙伴热推景点~"
+      }
+    ],
+    "weekendList": [
+      {
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1509/ff/4184c6c13edbb.jpg_r_640x214_60474b61.jpg",
+        "title": "成都周边秋色",
+        "desc": "细数成都周边秋天最美仙境"
+      },
+        {
+        "id": "0002",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/a2/78e4dbcfd45a6d.jpg_r_640x214_7a62b06a.jpg",
+        "title": "成都必游TOP10",
+        "desc": "成都的标志，也是现代人对老成都的记忆"
+      },
+        {
+        "id": "0003",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/63/0ffcb5c329a19c.jpg_r_640x214_93fd1e5a.jpg",
+        "title": "慢游成都最美古镇",
+        "desc": "撷取一份悠闲，寻觅散落在时光里的幸福"
+      },
+      {
+        "id": "0004",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/b8/e6206794272459.jpg_r_640x214_a002ded9.jpg",
+        "title": "郊野户外深呼吸",
+        "desc": "做个久违的深呼吸，来一场清肺之旅"
+      }
+    ]
+  }
+}
